@@ -1,0 +1,32 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<mat-grid-list fxLayout="row" [cols]="getGridCols()">
+  <mat-grid-tile *ngFor="let user of userList">
+    <mat-card class="card">
+      <img [src]="user.avatar" alt="Avatar" class="image" />
+      <mat-card-content>
+        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        <p><span class="email">Email:</span> {{ user.email }}</p>
+        <p><span class="id">ID: </span>{{ user.id }}</p>
+        <button [routerLink]="['/users', user.id]" class="button-details">
+          show details
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<div *ngIf="!loading" class="pagination-buttons">
+  <button
+    class="previous-button"
+    (click)="previousPage()"
+    [disabled]="currentPage === 1"
+  >
+    <mat-icon>keyboard_arrow_left</mat-icon> Previous
+  </button>
+  <button
+    class="next-button"
+    (click)="nextPage()"
+    [disabled]="currentPage === totalPages"
+  >
+    Next <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+</div>

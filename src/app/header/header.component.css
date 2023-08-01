@@ -1,0 +1,24 @@
+.toolbar {
+  margin-bottom: 40px;
+  background: linear-gradient(to left, #007bff, gray);
+}
+.input-seacrch {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.input-seacrch input {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: gray;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+@media (max-width: 750px) {
+  .input-seacrch input {
+    visibility: hidden;
+  }
+}

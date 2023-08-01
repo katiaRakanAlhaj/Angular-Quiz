@@ -1,0 +1,20 @@
+<mat-toolbar color="warn" class="toolbar">
+  <button mat-icon-button>
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>person</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+
+  <div class="input-seacrch">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="searchUsers()"
+      placeholder="Search by ID"
+    />
+  </div>
+</mat-toolbar>

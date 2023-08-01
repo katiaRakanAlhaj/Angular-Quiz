@@ -1,0 +1,22 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<div *ngIf="!loading">
+  <div *ngIf="userNotFound" class="card">
+    <p>User not found</p>
+  </div>
+  <div *ngIf="!userNotFound && user" class="card">
+    <img [src]="user.avatar" alt="Avatar" class="image" />
+    <div class="card-details">
+      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+      <p><span class="email">Email:</span> {{ user.email }}</p>
+      <p><span class="id">ID: </span>{{ user.id }}</p>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      class="return-button"
+      (click)="goToMainPage()"
+    >
+      Go to Main Page
+    </button>
+  </div>
+</div>

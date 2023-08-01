@@ -1,0 +1,96 @@
+.loading {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.card {
+  box-shadow: 3px 3px 3px 3px rgb(152, 150, 150);
+  width: 280px;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+.image {
+  height: 250px;
+}
+.card:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.email {
+  font-weight: bold;
+  color: gray;
+  font-size: 15px;
+}
+.id {
+  font-weight: bold;
+  color: gray;
+  font-size: 15px;
+}
+p {
+  font-size: 15px;
+}
+.button-details {
+  color: white;
+  background-color: #007bff;
+  width: 120px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.button-details:hover {
+  background-color: #0056b3;
+}
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.previous-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.next-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.next-button:hover {
+  background-color: #0056b3;
+}
+@media (min-width: 956px) and (max-width: 1200px) {
+  .card {
+    margin-bottom: 7rem !important;
+  }
+}
+@media (min-width: 641px) and (max-width: 750px) {
+  .card {
+    margin-bottom: 10rem !important;
+  }
+}
